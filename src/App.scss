@@ -1,0 +1,15 @@
+body{
+    margin:0;
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-font-smoothing:antialiased;//субпиксельное сглаживание
+    -moz-osx-font-smoothing: grayscale;//это значение использует оттенки серого (grayscale) для сглаживания краев
+    background-color:#f3ecec;
+}
+
+.wrapper{
+ background: #f3ecec;
+ box-shadow: 0px 10px 20px #300606;
+ border-radius: 20px;
+ max-width: 1080px;
+ margin: 0 auto;
+}
