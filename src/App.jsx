@@ -25,7 +25,7 @@ function App() {
 
   <div className='content'>
     <h1> контент для магазина </h1>
-       .....
+       <p> 011110011</p>
   </div>
 
     </div>
