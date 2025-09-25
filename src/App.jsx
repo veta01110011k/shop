@@ -1,77 +1,109 @@
 import './App.scss'
-
 function App() {
   return (
-    <div className='wrapper clear'>
-      <header className='d-flex justify-between align-center'>
-      <div className='d-flex align-center'>
-          <img width={60} height={60} src='public\img\logo.png' />
-        <div className='headerInfo'>
-          <h3 className='text-uppercase'>NAME SHOPS</h3>
-          <p>слоган</p>
+    <>
+      <div className='overlay'>
+        <div className='drawer'>
+         <h2> корзина </h2>
+
+         <div className="cartItem">
+        <img width={80} height={80} src="public/img/product.img/content 1.jpg" alt="product" />
+        <div>
+          <p>текст к картинке</p>
+          <p>1205руб</p>
+        </div>
+        
+         </div>
         </div>
       </div>
 
-        <ul className='d-flex'>
-          <li className='mr-30'>
-           <img className='iconHerder' width={18} height={18} src='public\img\human.png'/>
-          <samp>1205 руб</samp>
-          </li>
-          <li>
-           <img className='iconHerder' width={18} height={18} src='public\img\basket.png'/>
-          </li>
-        </ul>
- </header>
+      <div className='wrapper clear'>
+        <header className='d-flex justify-between align-center'>
+          <div className='d-flex align-center'>
+            <img width={60} height={60} src='public/img/logo.png' alt='logo' />
+            <div className='headerInfo'>
+              <h3 className='text-uppercase'>NAME SHOPS</h3>
+              <p>слоган</p>
+            </div>
+          </div>
 
-  <div className='content p-40'>
-    <h1 className='mb-40'> контент для магазина </h1>
- 
+          <ul className='d-flex'>
+            <li className='mr-30'>
+              <img className='iconHerder' width={18} height={18} src='public/img/human.png' alt='human'/>
+              <span>1205 руб</span>
+            </li>
+            <li>
+              <img className='iconHerder' width={18} height={18} src='public/img/basket.png' alt='basket'/>
+            </li>
+          </ul>
+        </header>
 
-   <div className='card'>
-    <img width={133} height={133} src="public\img\product.img\content 1.jpg" alt="product" />
-    <h5>нзвание товара</h5>
-    <div className='d-flex justify-between align-center'> 
-      <div className='d-flex flex-column'>
-        <samp>цена:</samp>
-        <b>1 997 pуб.</b>
-        <button className='button'>
-          <img width={11} height={11} src="public\img\+.png" alt="" />
-        </button>
+        <div className='content p-40 '>
+          <div className='d-flex align-center mb-40 justify-between'>
+            <h1>контент для магазина</h1>
+            <div className='search-block d-flex'>
+              <img width={28} height={28} src='public/img/search.png' alt='search'/>
+              <input placeholder='поиск' />
+            </div>
+          </div>
+
+          <div className='d-flex'>
+            <div className='card'>
+              <div className='favorite'>
+                <img width={30} height={30} src='public/img/like.png' alt='like' />
+              </div>
+              <img width={133} height={133} src="public/img/product.img/content 1.jpg" alt="product" />
+              <h5>название товара</h5>
+              <div className='d-flex justify-between align-center'> 
+                <div className='d-flex flex-column'>
+                  <span>цена:</span>
+                  <b>1 997 руб.</b>
+                </div>
+                <button className='button'>
+                  <img width={11} height={11} src="public/img/+.png" alt="+" />
+                </button>
+              </div>
+            </div>
+                
+            <div className='card'>
+              <div className='favorite'>
+                <img width={30} height={30} src='public/img/like.png' alt='like' />
+              </div>
+              <img width={133} height={133} src="public/img/product.img/content 2.jpg" alt="product" />
+              <h5>название товара</h5>
+              <div className='d-flex justify-between align-center'> 
+                <div className='d-flex flex-column'>
+                  <span>цена:</span>
+                  <b>1 997 руб.</b>
+                </div>
+                <button className='button'>
+                  <img width={11} height={11} src="public/img/+.png" alt="+" />
+                </button>
+              </div>
+            </div>
+            
+             <div className='card'>
+              <div className='favorite'>
+                <img width={30} height={30} src='public/img/like.png' alt='like' />
+              </div>
+              <img width={133} height={133} src="public/img/product.img/content 3.jpg" alt="product" />
+              <h5>название товара</h5>
+              <div className='d-flex justify-between align-center'> 
+                <div className='d-flex flex-column'>
+                  <span>цена:</span>
+                  <b>1 997 руб.</b>
+                </div>
+                <button className='button'>
+                  <img width={11} height={11} src="public/img/+.png" alt="+" />
+                </button>
+              </div>
+            </div>
+
+          </div>
+        
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div className='card'>
-    <img width={133} height={133} src="public\img\product.img\content 2.jpg" alt="product" />
-    <h5>нзвание товара</h5>
-    <div className='d-flex justify-between align-center'> 
-      <div className='d-flex flex-column'>
-        <samp>цена:</samp>
-        <b>1 997 pуб.</b>
-        <button className='button'>
-          <img width={11} height={11} src="public\img\+.png" alt="" />
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div className='card'>
-    <img width={133} height={133} src="public\img\product.img\content 3.jpg" alt="product" />
-    <h5>нзвание товара</h5>
-    <div className='d-flex justify-between align-center'> 
-      <div className='d-flex flex-column'>
-        <samp>цена:</samp>
-        <b>1 997 pуб.</b>
-        <button className='button'>
-          <img width={11} height={11} src="public\img\+.png" alt="" />
-        </button>
-      </div>
-    </div>
-  </div>
-   
- </div>
-    </div>
+    </>
   );
 }
-
 export default App

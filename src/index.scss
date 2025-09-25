@@ -1,9 +1,13 @@
 body{
-    margin:0;
+    margin:20px;
     font-family: 'Lora', Courier, monospace;
     -webkit-font-smoothing:antialiased;//субпиксельное сглаживание
     -moz-osx-font-smoothing: grayscale;//это значение использует оттенки серого (grayscale) для сглаживания краев
-    background-color:#f3ecec;
+    background-color:#360101;
+}
+
+button, input{
+    font-family: 'Lora', Courier, monospace;
 }
 
 .iconHerder{
@@ -12,7 +16,7 @@ body{
 
 .wrapper{
  background: #ebe6d0ff;
- box-shadow: 0px 10px 20px #300606 ;
+ box-shadow: 0px 10px 20px #000000 ;
  border-radius: 20px;
  max-width: 1080px;
  margin: 50px auto;
@@ -42,12 +46,25 @@ header {
      }
 }
  
-.card{
-   border: 9px solid rgb(176, 166, 132);
+.card {
+   border: 9px solid #b59f86;
    padding: 20px; 
    width: 220px;
    border-radius: 5px;
    margin-right: 40px;
+   //анимация для подсветки и подьемакарточки =>
+   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+   cursor: pointer;
+
+&:hover{ //подсветка карточки 
+    box-shadow: 0px 14px 30px #360101e6;
+    transform: translate(-5px);
+}
+
+.favorite{
+    position: absolute;
+    cursor: pointer;
+}
 
    span{
     font-size: 12px;
@@ -92,4 +109,44 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.search-block {
+    border: 2px solid #b1a28e;
+    border-radius: 10px;
+    padding: 0 15px;
+    background-color: #b59f86;
+    
+input{
+    border: 0;
+    padding: 5px;
+    background-color: #b59f86;
+    width: 200px;
+}
+}
+
+.drawer{
+    position: fixed; // меняем absolute на fixed
+    width: 385px;
+    height: 100%;
+    right: 0;
+    top: 0; // добавляем top: 0
+    background: #FFFFFF;
+    box-shadow: -10px 4px 24px #000000;
+    z-index: 2; // увеличиваем z-index чтобы был поверх overlay
+}
+
+h2{
+   margin: 0;  
+   font-size: 24px;
+}
+
+.overlay{
+    position: fixed; // меняем absolute на fixed
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b9;
+    z-index: 1;
 }
