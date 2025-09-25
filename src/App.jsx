@@ -4,17 +4,64 @@ function App() {
     <>
       <div className='overlay'>
         <div className='drawer'>
-         <h2> корзина </h2>
+         <h2 className='mb-30'> корзина </h2>{/* растояние между всеми элемкнтами */}
 
-         <div className="cartItem">
-        <img width={80} height={80} src="public/img/product.img/content 1.jpg" alt="product" />
-        <div>
-          <p>текст к картинке</p>
+
+<div className="items">
+<div className="cartItem mb-20 d-flex align-center">
+        <img className='mr-20' 
+        width={60} height={60} 
+        src="public/img/product.img/content 1.jpg"
+        alt="product" />
+         
+        <div className='mr-20'>
+          <p className='mb-5'>текст к картинке</p>
           <p>1205руб</p>
         </div>
-        
+        <img className='exit'
+        width={18} height={18} 
+        src='public\img\exit.jpg' 
+        alt='exit'/>
          </div>
+
+<div className="cartItem mb-20 d-flex align-center">
+        <img className='mr-20' 
+        width={60} height={60} 
+        src="public/img/product.img/content 3.jpg"
+        alt="product" />
+         
+        <div className='mr-20'>
+          <p className='mb-5'>текст к картинке</p>
+          <p>1205руб</p>
         </div>
+        <img className='exit'
+        width={18} height={18} 
+        src='public\img\exit.jpg' 
+        alt='exit'/>
+         </div>
+         </div>
+<div className='cartTotalBlock'>
+
+<ul>
+  <li >
+    <span>Итого: </span>
+    <div> </div>
+    <b>10 765руб.</b>
+  </li>
+  <li >
+    <span>Налог 5%:</span>
+    <div></div>
+    <b>538руб.</b>
+  </li>
+</ul>
+<button className='redButton'> офозрмить заказ
+  <img width={39} height={39}
+  src='public\img\arrow.png' alt='arrow'/>
+  </button>
+
+</div>
+
+      </div>
       </div>
 
       <div className='wrapper clear'>

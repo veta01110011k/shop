@@ -125,21 +125,9 @@ input{
 }
 }
 
-.drawer{
-    position: fixed; // меняем absolute на fixed
-    width: 385px;
-    height: 100%;
-    right: 0;
-    top: 0; // добавляем top: 0
-    background: #FFFFFF;
-    box-shadow: -10px 4px 24px #000000;
-    z-index: 2; // увеличиваем z-index чтобы был поверх overlay
-}
 
-h2{
-   margin: 0;  
-   font-size: 24px;
-}
+
+
 
 .overlay{
     position: fixed; // меняем absolute на fixed
@@ -149,4 +137,108 @@ h2{
     height: 100%;
     background-color: #000000b9;
     z-index: 1;
+}
+
+.drawer{
+    position: fixed; // меняем absolute на fixed
+    width: 350px;
+    height: 100%;
+    right: 0;
+    top: 0; 
+    background: rgb(211, 205, 177);
+    box-shadow: -10px 4px 24px #000000;
+    z-index: 2; // увеличиваем z-index чтобы был поверх overlay
+    padding: 30px; //отступ для обьектов внутри 
+
+    h2{
+   margin: 0;  
+   font-size: 24px;
+}
+}
+
+.cartTotalBlock{
+ul{
+    margin-bottom: 20px !important;
+    li{
+    display: flex;
+    align-items: flex-end;
+    color: #360101;
+    margin-bottom: 20px;//отступ между каждой il
+
+    
+    div{
+        flex: 0.7;//занимает всю ширину в строче
+        height: 1px;
+        border-bottom: 1px dashed #360101;//пунктирная линия 
+        position: relative;  //выравнивание позиции
+        top: -5px;//выравнивание позиции
+        margin: 0 7px;
+    }
+    }
+    }
+
+.redButton{
+position: relative;
+
+&:hover{ //при наведении стрелочка двинается по Х на 10px
+    img{
+        transform: translateX(10px); 
+    }
+}
+    img{
+     position: absolute; 
+     right:30px;
+     top: 7px;
+     transition: 0.5s ease-in-out;
+    }
+    }
+ 
+
+    button{
+        width: 350px;
+        height: 50px;
+        position: absolute;
+        background:#360101;
+        border-radius: 20px;  
+        border:0;
+        font-size: 15px;
+        color: #b59f86;
+        cursor: pointer;//при наведении меняется курсор
+        transition: 0.3S ease-in-out;//при наведении меняется цвет в течении 0.3секунд
+    
+        &:hover{
+            background: lighten($color: #360101, $amount: 10%);//при наведении цвет на 10%
+        }
+        //&:active{ 
+        //    background: darken($color: #360101, $amount: 10%);//при наведении меняется цвет на 10%
+        //}
+    }
+}
+
+.cartItem{//контейнет для корточки 
+    border: 4px solid #360101; 
+    border-radius: 10px;
+    overflow: hidden; //что бы картонка не выходила за рамку
+    width: 350px ;
+    height: 60px;
+    p{
+        font-size: 14px;
+    }
+    b{
+        font-style: 16px;
+    }
+    .cart{
+        border-radius:6px;
+    }
+    .exit{//.removeBtn Анимация для кнопки удаления
+        opacity: 0.6;
+        cursor: pointer;
+        transition: opacity 0.15s ease-in-out;
+        border-radius: 3px;
+
+
+        &:hover{
+            opacity: 1 ;
+        }
+    }
 }
