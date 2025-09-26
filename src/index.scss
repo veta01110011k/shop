@@ -148,22 +148,44 @@ input{
     background: rgb(211, 205, 177);
     box-shadow: -10px 4px 24px #000000;
     z-index: 2; // увеличиваем z-index чтобы был поверх overlay
-    padding: 30px; //отступ для обьектов внутри 
+    padding: 10px; //отступ для обьектов внутри 
+    flex-direction: column;
+    display: flex;
+
+.drawerContent {
+    flex: 1; // занимает все доступное пространство
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; // скрываем переполнение
+}
+
+.items{
+    flex: 1; // занимает все пространство кроме cartTotalBlock
+    overflow: auto; // прокрутка только для товаров
+    margin-bottom: 20px;
+}
 
     h2{
    margin: 0;  
    font-size: 24px;
+   flex-shrink: 0; // чтобы не сжимался
+img{
+    border-radius: 5px;
+}
 }
 }
 
 .cartTotalBlock{
+    flex-shrink: 0; /* Чтобы не сжимался */
+    margin-top: -40px; /* Поднимем на 10px вверх */
+    padding: 20px 0; //отступ сверху и снизу
 ul{
-    margin-bottom: 20px !important;
+    margin-bottom: 5px !important;
     li{
     display: flex;
     align-items: flex-end;
     color: #360101;
-    margin-bottom: 20px;//отступ между каждой il
+    margin-bottom: 5px;//отступ между каждой il
 
     
     div{
@@ -197,7 +219,7 @@ position: relative;
     button{
         width: 350px;
         height: 50px;
-        position: absolute;
+        position: relative;
         background:#360101;
         border-radius: 20px;  
         border:0;
@@ -219,8 +241,8 @@ position: relative;
     border: 4px solid #360101; 
     border-radius: 10px;
     overflow: hidden; //что бы картонка не выходила за рамку
-    width: 350px ;
-    height: 60px;
+    width: 300px ;
+    height: 50px;
     p{
         font-size: 14px;
     }
